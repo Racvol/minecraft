@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+
+/* Reset
+------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0;font-size: 100%; vertical-align: baseline; background: transparent;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* Standart
+------------------------------------------------------------------------------------------------------------------------------*/
+body {margin:10px 20px 0px 20px; font-family: Verdana; font-size: 13px; color: #f1ece4; background: #141412; line-height: 14px;}
+a {color: #efb86a;}
+a:hover {text-decoration: none;}
+.body p {margin-bottom: 14px !important;}
+.ya {margin-left: -5px; margin-top: 14px;}
+p {line-height: 14px;}
+p + p {margin-top: 14px;}
+span.highlight {background-color: #e18927;}
+
+/* ---------->>> CLEARING <<<----------*/
+.clear {clear: both;}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+/* ---------->>> INPUTS <<<----------*/
+input.text {height: 13px; background: url('../img/input_bg.png') no-repeat; border: 0; font: 11px Tahoma; color: #b0b0b0; padding: 5px 9px; -webkit-border-radius:5px;}
+input.radio {margin: 0;}
+select {background: #0d0d0c; color: #f1ece4; font: 11px Tahoma; border: 1px solid #785f3a;}
+input.search {width: 53px; height: 23px; border: 0; cursor: pointer;}
+
+
+/* ---------->>> GLOBAL <<<----------*/
+#layout {margin-bottom: 76px;}
+
+#menu {height: 47px; background: url('../img/top_menu_bg.png') center no-repeat;}
+#main {width: 980px; margin: 0 auto 64px;}
+#sidebar {float: left; width: 242px;}
+#content {float: right; width: 730px;}
+footer {width: 980px; margin: 0 auto;}
+
+
+
+/* ---------->>> MENU <<<----------*/
+#menu div.menu_body {width: 980px; margin: 0 auto;}
+#menu div.menu_body div.search {float: left; width: 218px; padding: 12px 0 0 17px;}
+#menu div.menu_body div.search form input.text {width: 129px; vertical-align: top;}
+#menu div.menu_body div.links {float: left;}
+#menu div.menu_body div.links ul {font-size: 12px; font-weight: bold; line-height: 41px; color: #959595;}
+#menu div.menu_body div.links ul li {display: inline-block; height: 45px; padding: 2px 11px 0 14px; background: url('../img/menu_splitter.png') right no-repeat;}
+#menu div.menu_body div.links ul li.last {background: transparent;}
+#menu div.menu_body div.links ul li a {display: block; height: 100%; cursor: pointer; text-decoration: none;}
+/* ---------->>> SIDEBAR <<<----------*/
+
+.status {
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    height:100px;
+    text-align:center;
+    margin-bottom:10px;
+
+}
+section {
+    border:40px;
+    -webkit-border-image:url(../img/section.png) 40;
+    min-height:800px;
+    min-width:800px;
+    padding:0px 0px 0px -20px;
+
+}
+article {
+    margin:0px 0px 0px -20px;
+}
+
+
+.gravatar {
+
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    -o-border-radius:15px;
+    border-radius:15px;
+    -webkit-box-shadow: -1px 1px 5px black;
+}
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
+iframe {
+	background-color : black;
+	color : #d3d3d3;
+	border : none;/* убираем рамку*/
+	font-family:Courier New,Verdana,monospace;
+	scrollbar-face-color: #191919;
+	scrollbar-shadow-color: #505050;
+	scrollbar-highlight-color: #505050;
+	scrollbar-3dlight-color: black;
+	scrollbar-darkshadow-color: black;
+	scrollbar-track-color: #191919;
+	scrollbar-arrow-color: #505050;
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="menu">
+        <div class="menu_body clearfix">
+<div class="links" style="white-space: nowrap; width: 530px;">
+		<ul style="float: left">
+		<li>Главная</li>
+		<li><a href="http://danieldefo.ru/news">
+		<span class="outer">
+		<span class="inner">Новости</span></span>
+		</a></li>
+		<li><a href="http://danieldefo.ru/gallery">
+		<span class="outer"><span class="inner">О Сервере</span></span></a></li>
+
+<% if signed_in? %>
+<li><%= link_to "Выход", signout_path, :method => :delete %></li>
+<% else %>
+<li><%= link_to "Регистрация", signup_path %></li>
+<li><%= link_to "Вход", signin_path %></li>
+<% end %>
+		<li><a href="http://danieldefo.ru/faq"><span class="outer">
+		<span class="inner">FAQ</span></span></a></li>		</ul>
+
+</div>
+    </div>
+    <header class="status">
+    <table width="100%">
+    <tr>
+    <td width="50%" align="right">asdas</td>
+    <td width="100px"><%= gravatar_for current_user if signed_in? %></td>
+    <td width="50%" align="left">
+    <ul>
+    <li><%= link_to "Настройки", edit_user_path(current_user) %></li>
+    <li><%= link_to "Users", users_path %></li>
+    <li><%= link_to "Profile", current_user %></li>
+    </ul>
+    </td>
+    </tr>
+    </table>
+
+
+    </header>
+<section>
+<ifarme name="chat" width="400" height="300">
+  <div id="chat">
+  <%= render @posts %>
+  </div>
+  <div><%= render 'shared/post_form' %></div>
+</iframe>
+  <article>
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, :class => "flash #{key}") %>
+        <% end %>
+<%= yield %>
+  </article>
+</section>
+<%= debug(params) if Rails.env.development? %>
+</body>
+</html>
+
